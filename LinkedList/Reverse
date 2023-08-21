@@ -1,3 +1,4 @@
+// по ссылкам
 public void Revert()
 {
     if (root != null && root.next != null)
@@ -22,6 +23,7 @@ void Revert(Node currentNode, Node previousNode)
     previousNode.next = null;
 }
 
+// по значениям
 public void Reverce()
 {
     if (root == null)
