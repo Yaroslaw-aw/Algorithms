@@ -1,3 +1,27 @@
+public void Revert()
+{
+    if (root != null && root.next != null)
+    {
+        // Node temp = root;
+        Revert(root.next, root);
+        // temp.next = null;
+    }
+}
+
+void Revert(Node currentNode, Node previousNode)
+{
+    if (currentNode == null)
+    {
+        root = currentNode;
+    }
+    else
+    {
+        Revert(currentNode.next, currentNode);
+    }
+    currentNode.next = previousNode;
+    previousNode.next = null;
+}
+
 public void Reverce()
 {
     if (root == null)
